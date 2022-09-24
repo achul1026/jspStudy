@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;MustHaveJsp&apos; to &apos;MustHaveJSP&apos;" description="Rename resource &apos;MustHaveJsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/MustHaveJsp" name="MustHaveJSP" stamp="1663586907835" updateReferences="true"/>
+</session>
