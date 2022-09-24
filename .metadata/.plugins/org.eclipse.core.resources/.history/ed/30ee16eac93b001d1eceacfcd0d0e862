@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	String popupMode = "on";
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<title>쿠키를 이용한 팝업 관리 ver 0.1</title>
+<style>
+	div#popup{
+		position : absolute; 
+		top:50; 
+		left:50px; 
+		color: yellow;
+		width: 270px;
+		height: 100px;
+		background-color:gray;
+	}
+	div#popup>div{
+		position: relative;
+		background-color:#ffffff;
+		top:0px;
+		border: 1px solid gray;
+		padding:10px;
+		color: black;
+	}
+</style>
+<script src="https://ajax.goolgepis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$('#closeBtn').click(funtion(){
+		
+	})
+</script>
+</head>
+<body>
+
+</body>
+</html>
