@@ -8,7 +8,7 @@ public class MemberDAO extends JDBConnect{
 	}
 	
 	// 명시한 아이디/패스워드와 일치하는 회원 정보 반환
-	public MemberDTO getMemberDAO(String uid, String upass) {
+	public MemberDTO getMemberDTO(String uid, String upass) {
 		MemberDTO dto = new MemberDTO(); // 회원 정보 DTO 객체 생성
 		String query = "SELECT * FROM member WHERE id=? AND pass=?"; // 쿼리문 템플릿
 		

@@ -76,4 +76,38 @@
     <param-name>PAGES_PER_BLOCK</param-name>
     <param-value>10</param-value>
   </context-param>
+  
+  <!-- web.xml에 매핑 정보 추가하기(예제 13-2) -->
+  <servlet> <!-- 서블릿 등록 -->
+  	<servlet-name>HelloServlet</servlet-name>
+  	<servlet-class>servlet.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping> <!-- 서블릿과 요청명 매핑 -->
+  	<servlet-name>HelloServlet</servlet-name>
+  	<url-pattern>/13Servlet/HelloServlet.do</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 요청명과 서블릿 매핑하기 -->
+  <servlet>
+  	<servlet-name>DirectServletPrint</servlet-name>
+  	<servlet-class>servlet.DirectServletPrint</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DirectServletPrint</servlet-name>
+  	<url-pattern>/13Servlet/DirectServletPrint.do</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 서블릿 매핑(예제 13-14) -->
+  <servlet>
+  	<servlet-name>MemberAuth</servlet-name>
+  	<servlet-class>servlet.MemberAuth</servlet-class>
+  	<init-param>
+  		<param-name>admin_id</param-name>
+  		<param-value>nakja</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MemberAuth</servlet-name>
+  	<url-pattern>/13Servlet/MemberAuth.mvc</url-pattern>
+  </servlet-mapping>
 </web-app>
