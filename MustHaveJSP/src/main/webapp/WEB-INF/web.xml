@@ -41,7 +41,7 @@
   </context-param>
   <context-param>
     <param-name>OracleId</param-name>
-    <param-value>musthave</param-value>
+    <param-value>system</param-value>
   </context-param>
   <context-param>
     <param-name>OraclePwd</param-name>
@@ -77,37 +77,63 @@
     <param-value>10</param-value>
   </context-param>
   
-  <!-- web.xml에 매핑 정보 추가하기(예제 13-2) -->
-  <servlet> <!-- 서블릿 등록 -->
-  	<servlet-name>HelloServlet</servlet-name>
-  	<servlet-class>servlet.HelloServlet</servlet-class>
+  <!-- 서블릿 매핑 1(예제 13-2) -->
+  <servlet>  <!-- 서블릿 등록 -->
+    <servlet-name>HelloServlet</servlet-name>
+    <servlet-class>servlet.HelloServlet</servlet-class>
   </servlet>
-  <servlet-mapping> <!-- 서블릿과 요청명 매핑 -->
-  	<servlet-name>HelloServlet</servlet-name>
-  	<url-pattern>/13Servlet/HelloServlet.do</url-pattern>
+  <servlet-mapping>  <!-- 서블릿과 요청명 매핑 -->
+    <servlet-name>HelloServlet</servlet-name>
+    <url-pattern>/13Servlet/HelloServlet.do</url-pattern>
   </servlet-mapping>
-  
-  <!-- 요청명과 서블릿 매핑하기 -->
+
+  <!-- 서블릿 매핑 2(예제 13-7) -->
   <servlet>
-  	<servlet-name>DirectServletPrint</servlet-name>
-  	<servlet-class>servlet.DirectServletPrint</servlet-class>
+    <servlet-name>DirectServletPrint</servlet-name>
+    <servlet-class>servlet.DirectServletPrint</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>DirectServletPrint</servlet-name>
-  	<url-pattern>/13Servlet/DirectServletPrint.do</url-pattern>
+    <servlet-name>DirectServletPrint</servlet-name>
+    <url-pattern>/13Servlet/DirectServletPrint.do</url-pattern>
   </servlet-mapping>
   
-  <!-- 서블릿 매핑(예제 13-14) -->
+  <!-- 서블릿 매핑 3(예제 13-14) -->
   <servlet>
-  	<servlet-name>MemberAuth</servlet-name>
-  	<servlet-class>servlet.MemberAuth</servlet-class>
-  	<init-param>
-  		<param-name>admin_id</param-name>
-  		<param-value>nakja</param-value>
-  	</init-param>
+    <servlet-name>MemberAuth</servlet-name>
+    <servlet-class>servlet.MemberAuth</servlet-class>
+    <init-param>
+      <param-name>admin_id</param-name>
+      <param-value>nakja</param-value>
+    </init-param>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>MemberAuth</servlet-name>
-  	<url-pattern>/13Servlet/MemberAuth.mvc</url-pattern>
+    <servlet-name>MemberAuth</servlet-name>
+    <url-pattern>/13Servlet/MemberAuth.mvc</url-pattern>
   </servlet-mapping>
+  
+  <!-- 서블릿 매핑 4(예제 14-4) -->
+  <servlet>
+    <servlet-name>MVCBoardList</servlet-name>
+    <servlet-class>model2.mvcboard.ListController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MVCBoardList</servlet-name>
+    <url-pattern>/mvcboard/list.do</url-pattern>
+  </servlet-mapping>
+    
+  <!-- 서블릿 매핑 5(예제 14-7) -->
+  <servlet>
+    <servlet-name>MVCBoardWrite</servlet-name>
+    <servlet-class>model2.mvcboard.WriteController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MVCBoardWrite</servlet-name>
+    <url-pattern>/mvcboard/write.do</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 첨부 파일 최대 용량 설정(예제 14-8) -->
+  <context-param>
+  	<param-name>maxPostSize</param-name>
+  	<param-value>1024000</param-value>
+  </context-param>
 </web-app>
