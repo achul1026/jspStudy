@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import fileupload.FileUtil;
 
-@WebServlet("mvcboard/download/do")
+@WebServlet("/mvcboard/download/do")
 public class DownloadController extends HttpServlet{
 
 	@Override
