@@ -4,8 +4,8 @@
 <head>
 <title>웹소켓 채팅</title>
 <script>
-	var webSocket = new WebSocket(
-		"<%= application.getInitParameter("CAHT_ADDR") %>/ChatingServer");
+var webSocket
+= new WebSocket("<%= application.getInitParameter("CHAT_ADDR") %>/ChatingServer");
 	// web.xml에서 선언해 둔 웹소켓 접속 URL뒤에 요청명을 덧붙여 웹소켓 객체를 생성하고
 	var chatWindow, chatMesage, chatId;
 	
@@ -18,7 +18,7 @@
 	}
 	
 	// 메시지 전송
-	function sendMessage(){
+	function sendmessage(){
 		// 대화창에 표시
 		chatWindow.innerHTML += "<div class='myMsg'>" + chatMessage.value +"</div>"
 		webSocket.send(chatId + '|' + chatMessage.value); // 서버로 전송
@@ -44,7 +44,7 @@
 		}
 	}
 	
-	webScoket.onopen = function(event){
+	webSocket.onopen = function(event){
 		chatWindow.innerHTML += "웹소켓 서버에 연결되었습니다.<br>";
 	}
 	
