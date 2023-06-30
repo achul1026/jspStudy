@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="inactiveToday"/>
+		<item key="selection" value="send"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="inactiveToday"/>
+			<item value="send"/>
+			<item value="chatWindow"/>
+			<item value="enterKey"/>
+			<item value="down"/>
+			<item value="psmt"/>
+			<item value="noVar"/>
+			<item value="selectlist"/>
+			<item value="source auth"/>
 		</list>
 		<list key="replacehistory">
 		</list>
